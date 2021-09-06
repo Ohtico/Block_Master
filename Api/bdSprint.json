@@ -1,0 +1,116 @@
+{
+    "album": [
+      {
+        "id": 1,
+        "genero": "Animación, Action, Adventure, Sci-Fi , Fantasy",
+        "puntuacion": "85",
+        "titulo": "¿Qué pasaría si...?",
+        "duracion": "34m",
+        "descripcion": "Inspirándose en los cómics del mismo nombre, cada episodio explora un momento crucial del Universo Cinematográfico Marvel.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630898044/Block-Master-React/peliculas/i6E8fx8lAEI0PGGCUlaA2Ap1gWi_hsygza.jpg"
+      },
+      {
+        "id": 2,
+        "genero": "Drama, Sci-Fi & Fantasy",
+        "puntuacion": "82",
+        "titulo": "Loki",
+        "duracion": "52m",
+        "descripcion": "La nueva serie Loki, de Marvel Studios, empieza allí donde terminó Vengadores: Endgame. En ella, el voluble villano Loki vuelve a ganarse el apodo de Dios del Engaño.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630898260/Block-Master-React/peliculas/kAHPDqUUciuObEoCgYtHttt6L2Q_sbm7ro.jpg"
+      },
+      {
+        "id": 3,
+        "genero": "Action & Adventure, Sci-Fi & Fantasy, Drama",
+        "puntuacion": "82",
+        "titulo": "Titanes",
+        "duracion": "43m",
+        "descripcion": "Después de lanzarse a actuar por su cuenta, el excompañero de Batman se encuentra con una serie de jóvenes héroes con problemas que necesitan desesperadamente un mentor.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630898433/Block-Master-React/peliculas/rOBgGPiuawSrtrkwvdHFt8MxC75_ivzamq.jpg"
+      },
+      {
+        "id": 4,
+        "genero": "Action & Adventure, Drama, Sci-Fi & Fantasy",
+        "puntuacion": "81",
+        "titulo": "The Walking Dead",
+        "duracion": "42m",
+        "descripcion": "The Walking Dead está ambientada en un futuro apocalíptico con la Tierra devastada por el efecto de un cataclismo, que ha provocado la mutación en zombies de la mayor parte de los habitantes del planeta. La serie, explora las dificultades de los protagonistas para sobrevivir en un mundo poblado por el horror, así como las relaciones personales que se establecen entre ellos, en ocasiones también una amenaza para su supervivencia.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630898597/Block-Master-React/peliculas/wsq1xCuC9kDhFeoE7xuQFDC5iRC_qb1dlm.jpg"
+      },{
+        "id": 5,
+        "genero": "Crimen, Sci-Fi & Fantasy",
+        "puntuacion": "85",
+        "titulo": "Lucifer",
+        "duracion": "45m",
+        "descripcion": "La serie se centrará en Lucifer (Tom Ellis) quien, aburrido e infeliz como el Señor del Infierno, dimite de su trono y abandona su reino para trasladarse a la ciudad de Los Angeles y abrir un lujoso piano-bar llamado Lux. Una vez allí ayudará a la policía a castigar a los más peligrosos criminales de la ciudad.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630898721/Block-Master-React/peliculas/wQh2ytX0f8IfC3b2mKpDGOpGTXS_rzxnan.jpg"
+      },{
+        "id": 6,
+        "genero": "Ciencia ficción, Acción, Suspense",
+        "puntuacion": "47",
+        "titulo": "Autodestrucción",
+        "duracion": "1h 35m",
+        "descripcion": "Autodestrucción es una versión de un mundo futuro, como si fuera un videojuego, y que a través de una serie de experimentos consiguen energía ilimitada de los universos paralelos. Todo parecer ir bien cuando algo del experimento sale mal. Para salvar a su familia del tremendo desastre provocado, el piloto Will Porterdeberá conseguir que la caja Redivider llegue a una torre y así salvar a la humanidad.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630898916/Block-Master-React/peliculas/v37W2H5ViMpl1uWeAoTpr3YKJxX_u8x65r.jpg"
+      },{
+        "id": 7,
+        "genero": "Suspense, Acción",
+        "puntuacion": "64",
+        "titulo": "Triple amenaza",
+        "duracion": "1h 40m",
+        "descripcion": "Se ha puesto precio a la cabeza de la hija de un multimillonario que tiene la intención de acabar con el mayor sindicato del crimen de la ciudad. Un equipo de mercenarios retirados deberán enfrentarse a un grupo de asesinos profesionales, y detenerlos antes de que maten a su objetivo.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630899067/Block-Master-React/peliculas/dNqgzDOkOjEaJRO4dp85ay0feu7_apzmoq.jpg"
+      },{
+        "id": 8,
+        "genero": "Drama, Acción",
+        "puntuacion": "69",
+        "titulo": "Buffalo Boys ",
+        "duracion": "1h 43m",
+        "descripcion": "Traicionado por las fuerzas coloniales holandesas, Arana logra escapar con sus sobrinos Jamar y Suwo, los hijos recién nacidos de Hamza, uno de los últimos sultanes indonesios que luchan contra la tiranía extranjera. En 1860, después de vagar durante años por las llanuras del salvaje oeste americano, Arana y los dos hermanos regresan a Indonesia para vengar a sus seres queridos y castigar al miserable que causó su desgracia.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630899219/Block-Master-React/peliculas/o1Bn2zlIDJSnM5aOljbOPTM6Kf9_ye3wi7.jpg"
+      },{
+        "id": 9,
+        "genero": "Terror, Suspense",
+        "puntuacion": "64",
+        "titulo": "Candyman",
+        "duracion": "1h 31m",
+        "descripcion": "Secuela espiritual del clásico de terror de 1992 Candyman. En esta ocasión, la historia transcurre en el gentrificado barrio de Chicago donde la leyenda comenzó.",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630899346/Block-Master-React/peliculas/40FuQAiHjCvh9fYFigGAVWJ6Czu_oh2l31.jpg"
+      },{
+        "id": 10,
+        "genero": "Drama, Suspense",
+        "puntuacion": "58",
+        "titulo": "Una historia de venganza",
+        "duracion": "1h 32m",
+        "portada":
+          "https://res.cloudinary.com/ohtico/image/upload/v1630899442/Block-Master-React/peliculas/ttZcrev62Xon87jv2tgNPgb927l_giyqp2.jpg"
+      }
+    ],
+    "usuario": [
+      {
+        "id": 1,
+        "apellido_paterno": "Gelvis",
+        "apellido_materno": "Oviedo",
+        "nombre": "Victor",
+        "username": "viticogelvis5@gmail.com",
+        "password": "3189d4ef5973d3c613d7d804156f9008"
+      },
+      {
+        "id": 2,
+        "apellido_paterno": "Ospina",
+        "apellido_materno": "Ortegon",
+        "nombre": "Johanna",
+        "username": "johannaOspina@gmail.com",
+        "password": "2c526bfb75fb91c8a2b27c073d2e89bf"
+      }
+    ]
+}
+  
