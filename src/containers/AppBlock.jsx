@@ -3,7 +3,6 @@ import Cartas from '../components/Cartas';
 import {Manos} from '../style/StyledAll'
 import Cabecera from '../components/Cabecera'  
 
-const url = 'https://api-sprint-dos.herokuapp.com/album'
 
 export default class AppBlock extends Component {
     constructor() {
@@ -14,6 +13,8 @@ export default class AppBlock extends Component {
         }
     }
     async componentDidMount (){
+const url = 'https://api-sprint-dos.herokuapp.com/album'
+
         const res = await fetch(url)
         const data = await res.json()
         this.setState({peli: data})
