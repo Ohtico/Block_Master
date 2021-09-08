@@ -1,4 +1,4 @@
 # Block_Master
 
 
-https://keen-kilby-941bd3.netlify.app/
+https://blissful-ritchie-562c16.netlify.app
