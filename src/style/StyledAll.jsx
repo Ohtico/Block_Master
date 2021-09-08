@@ -37,18 +37,30 @@ export const Imperro = styled.div`
     flex-wrap: nowrap;
 `;
 export const ContenedorP = styled.div`
-   
     display: flex;
     flex-direction: row;
 `;
 export const Cartica = styled.div`
-    width: 220px;
-    height: 330px;
-    margin: 20px;
-    margin-top: 9%;
+    width: 50px;
+    height: 160px;
+    margin: 70px;
+    padding: 90px;
 `;
 export const Manos = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-left: 1%;
+`;
+export const Boligrafo = styled.h2`
+    color: #FF8906;
+    display: flex;
+    justify-content:center;
+`;
+export const Tasa = styled.div`
+    display: flex;
+    justify-content:center;
+    color: #fff;
+`;
+export const Tetera = styled.div`
+    display: flex;
+    flex-direction: column;
 `;

@@ -4,10 +4,12 @@ import {Cartica} from '../style/StyledAll';
 
 export default class Cartas extends Component {
     render() {
-        const {portada, puntuacion} = this.props.movies
+        const {Poster} = this.props.movies
         return (
+            
             <div>
-               <Cartica> <img src={portada} alt="" srcset="" />  </Cartica>
+                
+               <Cartica> <img src={Poster} alt=""/>  </Cartica>
             </div>
         )
     }
