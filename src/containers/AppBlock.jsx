@@ -12,7 +12,7 @@ export default class AppBlock extends Component {
         super();
         this.state = {
             peli: [],
-            searchTerm: 'Batman'
+            searchTerm: 'Marvel'
         }
     }
     async componentDidMount() {
