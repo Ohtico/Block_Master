@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import { Tasa, Tetera, Nachos, But, Voto, Boligrafo, Enlace } from '../style/StyledAll'
+import uuid from 'react-uuid'
+import axios from 'axios'
+
+const urlBase = 'https://api-sprint-dos.herokuapp.com/usuario'
 
 export default class Registro extends Component {
 
@@ -30,6 +34,10 @@ export default class Registro extends Component {
 
     handleSutmit = (e) => {
         e.preventDefault();
+    }
+
+    RegistroUsuario = async () => {
+        await axios.post
     }
 
     render() {

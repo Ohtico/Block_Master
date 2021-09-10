@@ -99,7 +99,6 @@
       {
         "id": 1,
         "apellido_paterno": "Gelvis",
-        "apellido_materno": "Oviedo",
         "nombre": "Victor",
         "username": "viticogelvis5@gmail.com",
         "password": "3189d4ef5973d3c613d7d804156f9008"
@@ -107,7 +106,6 @@
       {
         "id": 2,
         "apellido_paterno": "Ospina",
-        "apellido_materno": "Ortegon",
         "nombre": "Johanna",
         "username": "johannaOspina@gmail.com",
         "password": "2c526bfb75fb91c8a2b27c073d2e89bf"
