@@ -59,8 +59,16 @@ export const Tasa = styled.div`
     display: flex;
     justify-content:center;
     color: #fff;
+    padding: 30px;
 `;
 export const Tetera = styled.div`
     display: flex;
     flex-direction: column;
+`;
+export const Nachos = styled.div`
+    align-items: center;
+    display: flex;
+    margin-left: 9vw;
+    margin-bottom: 6vh;
+    margin-top: 6vh;
 `;

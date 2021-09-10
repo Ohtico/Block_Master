@@ -1,84 +1,95 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+import { Tasa, Tetera, Nachos, But, Voto, Boligrafo, Enlace } from '../style/StyledAll'
 
 export default class Registro extends Component {
+
+    constructor(){
+        super();
+        this.state = {
+            data: [],
+            form:{
+                id:'',
+                apellido_paterno: '',
+                nombre: '',
+                username: '',
+                password: ''
+            }
+
+        }
+    }
+    handleChange = async (e) =>{
+            await this.setState({ 
+               form: {
+                   ...this.state.form,
+                   [e.targe.name]: e.targe.value
+               } 
+            });
+            console.log(this.state.form);
+    }
+
+    handleSutmit = (e) => {
+        e.preventDefault();
+    }
+
     render() {
         return (
-            <div className="Registro py-5 container text-center">
-            <form className="form-signin" onSubmit={this.handleSutmit}>
-                <h1 className="h3 mb-3 font-weight-normal">
-                    ¡Registrate en nuestro sistema!
-                </h1>
-                <div className="fadeIn first ">
-                    <img 
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS689Xb1GJwNGzZl9KR7CTRKAZFaXt1060H32xPbb8hw_NXNpJ409Sl-aLnPsJQUfKJnYEV_KndttR1bbUKS_f7DGE3OP59H1Y&usqp=CAU&ec=45725305" 
-                    id="icon" 
-                    alt="User Icon" 
-                    width="100px"/>
-                    <h3>Crea una cuenta</h3>
+
+            <Tasa>
+                <div className="Registro py-5 container text-center">
+                    <form className="form-signin" onSubmit={this.handleSutmit}>
+                        <Boligrafo>¡Registrate en nuestro sistema!</Boligrafo>
+                        <div className="fadeIn first ">
+                            <Nachos>
+                                <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
+                            </Nachos>
+                            <Boligrafo>Crea una cuenta</Boligrafo>
+                        </div>
+                        <Tetera>
+                            <But
+                                type="text"
+                                placeholder="Last Name"
+                                name="apellido_paterno"
+                                className="form-control"
+                                autoComplete="off"
+                                onChange={this.handleChange}
+                            />
+                            <But
+                                type="text"
+                                name="nombre"
+                                className="form-control"
+                                placeholder="Name"
+                                required=""
+                                onChange={this.handleChange}
+                            />
+                            <But
+                                type="email"
+                                name="email"
+                                className="form-control"
+                                placeholder="Email"
+                                required=""
+                                onChange={this.handleChange}
+                            />
+
+                            <But
+                                type="Password"
+                                name="password"
+                                className="form-control"
+                                placeholder="Password"
+                                required=""
+                                onChange={this.handleChange}
+                            />
+                            <br />
+                            <Voto type="submit">Register</Voto><br />
+                        </Tetera>
+                        <Tasa>
+                            <Link to="/login" ><Enlace>Already registered?</Enlace></Link>
+                        </Tasa>
+
+                    </form>
                 </div>
+            </Tasa>
 
-                <input
-                    type="text"
-                    placeholder="Apellido paterno"
-                    name="apellido_paterno"
-                    className="form-control"
-                    autoComplete="off"
-
-                />
-
-                <input
-                    type="text"
-                    placeholder="Apellido materno"
-                    name="apellido_materno"
-                    className="form-control"
-                    autoComplete="off"
-
-                    required=""
-
-                />
-
-                <input
-                    type="text"
-                    name="nombre"
-                    className="form-control"
-                    placeholder="nombre"
-                    required=""
-
-                />
-
-                <input
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    placeholder="Email"
-                    required=""
-
-                />
-
-                <input
-                    type="Password"
-                    name="password"
-                    className="form-control"
-                    placeholder="Password"
-                    required=""
-
-                />
-                <br />
-                <button
-                    type="submit"
-                    className="btn btn-primary btn-block mb-1"
-                >
-                    Register
-                </button>
-                <br />
-                <a
-                    to=""
-                    className="link"
-                >
-                    Already registered?
-                </a>
-            </form>
-        </div>
         )
     }
 }

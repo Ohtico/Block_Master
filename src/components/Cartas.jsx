@@ -8,7 +8,6 @@ export default class Cartas extends Component {
         return (
             
             <div>
-                
                <Cartica> <img src={Poster} alt=""/>  </Cartica>
             </div>
         )

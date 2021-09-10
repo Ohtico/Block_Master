@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import md5 from 'md5'
-import {Tasa, Tetera, But, Boligrafo, Voto, Enlace} from '../style/StyledAll'
+import {Tasa, Tetera, But, Boligrafo, Voto, Enlace, Nachos} from '../style/StyledAll'
 import {Link} from 'react-router-dom'
+import Swal from 'sweetalert2'
 const url = 'https://api-sprint-dos.herokuapp.com/usuario'
 //  
 
@@ -25,10 +26,29 @@ export default class Login extends Component {
             })
             .then(response => {
                 if (response.length > 0) {
-                    var respuesta = response[0];
-                    alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`);
+                    let respuesta = response[0];
+                    
+                    Swal.fire({
+                        background: '#0E3FA9',
+                        title: `Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`,
+                        showConfirmButton: true,
+                        confirmButtonText: 'Continuar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location= "/";
+                        }
+                      })
+
+
+
                 } else {
-                    alert('El usuario o la contraseña no son correctos');
+                    //alert(' El usuario o la contraseña no son correctos');
+                    Swal.fire({
+                        title: `El usuario o la contraseña no son correctos`,
+                        background: '#0E3FA9',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
                 }
             })
             .catch(error => {
@@ -54,7 +74,12 @@ export default class Login extends Component {
     render() {
         return (
             <Tasa>
+                
+               
             <form onSubmit={this.handleSubmit} className="form-signin">
+            <Nachos>
+                     <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
+                </Nachos>
                 <Boligrafo>Inicio de sesión</Boligrafo>
                     <Tetera>
                         <But
@@ -69,10 +94,11 @@ export default class Login extends Component {
                             type="Password"
                             id="inputPassword"
                             className="form-control mt-1"
-                            placeholder="Contreña"
+                            placeholder="Password"
                             required=""
                             name="password"
-                            onChange={this.handleChange}/>
+                            onChange={this.handleChange}/><br />
+                            
                         <Voto type="submit">Login</Voto>
                     </Tetera>
                     <Tasa>
