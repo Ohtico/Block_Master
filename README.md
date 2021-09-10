@@ -1,4 +1,4 @@
 # Block_Master
 
 
-https://blissful-ritchie-562c16.netlify.app
+https://relaxed-heyrovsky-2c9fff.netlify.app

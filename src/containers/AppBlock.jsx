@@ -39,8 +39,8 @@ export default class AppBlock extends Component {
                         <li><Enlace >Menos Valoradas</Enlace></li>
                         <Imperro>
                             <form onSubmit={handleOnsubmit}>
-                                <But placeholder="Busca tu pelicula favorita" type="text" name="searchTerm" value={this.state.searchTerm} onChange={(e) => this.setState({ searchTerm: e.target.value })}/><Voto><i class="material-icons" onClick={handleOnsubmit} id="car">search</i></Voto>
-                                <Link to="/login" ><Voto><i class="material-icons"  id="car">person_outline</i></Voto></Link>
+                                <But placeholder="Busca tu pelicula favorita" type="text" name="searchTerm" value={this.state.searchTerm} onChange={(e) => this.setState({ searchTerm: e.target.value })}/><Voto><i className="material-icons" onClick={handleOnsubmit} id="car">search</i></Voto>
+                                <Link to="/login" ><Voto><i className="material-icons"  id="car">person_outline</i></Voto></Link>
                             </form>
 
                         </Imperro>

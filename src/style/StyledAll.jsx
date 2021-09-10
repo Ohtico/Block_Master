@@ -15,7 +15,7 @@ export const Enlace = styled.a`
     margin: 1vw;
     font-size: 25px;
     &:hover{
-    color: #FF8906;
+    color: #FED941;
   }
 `;
 export const But = styled.input`
@@ -25,7 +25,7 @@ export const But = styled.input`
     width: 25vw;
 `;
 export const Voto = styled.button`
-    background-color: #FF8906;
+    background-color: #FED941;
     padding: 10px;
     border-radius: 2px;
     border: none;
@@ -51,7 +51,7 @@ export const Manos = styled.div`
     flex-wrap: wrap;
 `;
 export const Boligrafo = styled.h2`
-    color: #FF8906;
+    color: #FED941;
     display: flex;
     justify-content:center;
 `;

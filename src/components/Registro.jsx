@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Tasa, Tetera, Nachos, But, Voto, Boligrafo, Enlace } from '../style/StyledAll'
 import uuid from 'react-uuid'
 import axios from 'axios'
@@ -10,12 +10,12 @@ const urlBase = 'https://api-sprint-dos.herokuapp.com/usuario'
 
 export default class Registro extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
             data: [],
-            form:{
-                id:'',
+            form: {
+                id: '',
                 apellido_paterno: '',
                 nombre: '',
                 username: '',
@@ -24,14 +24,14 @@ export default class Registro extends Component {
 
         }
     }
-    handleChange = async (e) =>{
-            await this.setState({ 
-               form: {
-                   ...this.state.form,
-                   [e.target.name]: e.target.value
-               } 
-            });
-            console.log(this.state.form);
+    handleChange = async (e) => {
+        await this.setState({
+            form: {
+                ...this.state.form,
+                [e.target.name]: e.target.value
+            }
+        });
+        console.log(this.state.form);
     }
 
     handleSubmit = (e) => {
@@ -53,9 +53,9 @@ export default class Registro extends Component {
                 confirmButtonText: 'Continuar'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location= "/";
+                    window.location = "/";
                 }
-              })
+            })
         }).catch(error => {
             console.log(error.message);
         })
@@ -67,11 +67,11 @@ export default class Registro extends Component {
             <Tasa>
                 <div className="Registro py-5 container text-center">
                     <form className="form-signin" onSubmit={this.handleSubmit}>
+                        <Nachos>
+                            <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
+                        </Nachos>
                         <Boligrafo>¡Registrate en nuestro sistema!</Boligrafo>
                         <div className="fadeIn first ">
-                            <Nachos>
-                                <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
-                            </Nachos>
                             <Boligrafo>Crea una cuenta</Boligrafo>
                         </div>
                         <Tetera>
