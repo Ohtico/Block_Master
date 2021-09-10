@@ -9,8 +9,6 @@ import Login from '../components/Login';
 import AppBlock from "../containers/AppBlock";
 import Registro from "../components/Registro";
 
-
-
 export default class AppRouter extends Component {
       render() {
             return ( 

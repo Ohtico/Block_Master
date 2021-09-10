@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom'
 import { Tasa, Tetera, Nachos, But, Voto, Boligrafo, Enlace } from '../style/StyledAll'
 import uuid from 'react-uuid'
 import axios from 'axios'
+import md5 from 'md5'
+import Swal from 'sweetalert2'
 
 const urlBase = 'https://api-sprint-dos.herokuapp.com/usuario'
 
@@ -26,18 +28,37 @@ export default class Registro extends Component {
             await this.setState({ 
                form: {
                    ...this.state.form,
-                   [e.targe.name]: e.targe.value
+                   [e.target.name]: e.target.value
                } 
             });
             console.log(this.state.form);
     }
 
-    handleSutmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
     }
 
     RegistroUsuario = async () => {
-        await axios.post
+        await axios.post(urlBase, {
+            id: uuid,
+            apellido_paterno: this.state.form.apellido_paterno,
+            nombre: this.state.form.nombre,
+            username: this.state.form.username,
+            password: md5(this.state.form.password)
+        }).then(response => {
+            Swal.fire({
+                background: '#0E3FA9',
+                title: `Bienvenido`,
+                showConfirmButton: true,
+                confirmButtonText: 'Continuar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location= "/";
+                }
+              })
+        }).catch(error => {
+            console.log(error.message);
+        })
     }
 
     render() {
@@ -45,7 +66,7 @@ export default class Registro extends Component {
 
             <Tasa>
                 <div className="Registro py-5 container text-center">
-                    <form className="form-signin" onSubmit={this.handleSutmit}>
+                    <form className="form-signin" onSubmit={this.handleSubmit}>
                         <Boligrafo>¡Registrate en nuestro sistema!</Boligrafo>
                         <div className="fadeIn first ">
                             <Nachos>
@@ -72,7 +93,7 @@ export default class Registro extends Component {
                             />
                             <But
                                 type="email"
-                                name="email"
+                                name="username"
                                 className="form-control"
                                 placeholder="Email"
                                 required=""
@@ -88,7 +109,7 @@ export default class Registro extends Component {
                                 onChange={this.handleChange}
                             />
                             <br />
-                            <Voto type="submit">Register</Voto><br />
+                            <Voto type="submit" onClick={() => this.RegistroUsuario()}>Register</Voto><br />
                         </Tetera>
                         <Tasa>
                             <Link to="/login" ><Enlace>Already registered?</Enlace></Link>

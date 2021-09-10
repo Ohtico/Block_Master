@@ -39,8 +39,6 @@ export default class Login extends Component {
                         }
                       })
 
-
-
                 } else {
                     //alert(' El usuario o la contraseña no son correctos');
                     Swal.fire({
