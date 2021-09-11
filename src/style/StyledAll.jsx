@@ -90,3 +90,32 @@ export const Calificacion = styled.span`
     margin-top: 4vh;
     font-size: 20px;
 `;
+
+export const ModalDiv = styled.div`
+    display: ${ p => p.block && p.block};
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+`
+export const ContentDiv = styled.div`
+    position: fixed;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    padding: 2rem;
+    transform: translate(-50%, -50%);
+    color:#fff;
+`
+export const ContDetalles = styled.div`
+    display: flex;
+    justify-content: space-between;
+    
+`;
+export const Descripcion = styled.div`
+   margin: 20px;
+    
+`;

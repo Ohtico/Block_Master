@@ -17,9 +17,7 @@ export default class AppBlock extends Component {
             searchTerm: ''
         }
     }
-    // useEffect(() => {
-    //     handleOnsubmit()
-    // }, [searchTerm])
+
     async componentDidMount() {
         const rest = await fetch(urlbase)
         const data = await rest.json()
