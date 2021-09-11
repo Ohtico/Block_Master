@@ -10,7 +10,6 @@ let urlbase = 'https://pelis-blockmaster.herokuapp.com/peliculas?title_like='
 
 export default class AppBlock extends Component {
 
-
     constructor() {
         super();
         this.state = {
@@ -25,6 +24,7 @@ export default class AppBlock extends Component {
         const rest = await fetch(urlbase)
         const data = await rest.json()
         this.setState({ peli: data })
+        console.log(data);
     }
     trello = async (e) => {
         e.preventDefault()
