@@ -40,12 +40,7 @@ export const ContenedorP = styled.div`
     display: flex;
     flex-direction: row;
 `;
-export const Cartica = styled.div`
-    width: 50px;
-    height: 160px;
-    margin: 70px;
-    padding: 90px;
-`;
+
 export const Manos = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -71,4 +66,27 @@ export const Nachos = styled.div`
     margin-left: 9vw;
     margin-bottom: 6vh;
     margin-top: 6vh;
+`;
+export const Luz = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 95%;
+    margin-left: 2vw;
+`;
+export const ContImg = styled.div`
+    margin-top: 25px;
+    padding: 20px;
+`;
+
+export const Calificacion = styled.span`
+    background: #0000009b;
+    color: #fff;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    position: absolute;
+    align-items: center;
+    margin-top: 4vh;
+    font-size: 20px;
 `;

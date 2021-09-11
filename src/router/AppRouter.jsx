@@ -12,8 +12,7 @@ import Registro from "../components/Registro";
 export default class AppRouter extends Component {
       render() {
             return ( 
-                  <Router>
-
+                  <Router> 
                         <Switch>
                               <Route exact path="/detalle" component={Detalle}/>
                               <Route exact path="/registro" component={Registro}/>
