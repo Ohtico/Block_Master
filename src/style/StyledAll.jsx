@@ -29,6 +29,8 @@ export const Voto = styled.button`
     padding: 10px;
     border-radius: 2px;
     border: none;
+    cursor:pointer;
+    overflow: hidden;
 `;
 export const Imperro = styled.div`
     align-items: center;
@@ -99,6 +101,7 @@ export const ModalDiv = styled.div`
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
 `
 export const ContentDiv = styled.div`
     position: fixed;
@@ -113,9 +116,17 @@ export const ContentDiv = styled.div`
 export const ContDetalles = styled.div`
     display: flex;
     justify-content: space-between;
-    
 `;
 export const Descripcion = styled.div`
    margin: 20px;
-    
+`;
+export const VerAhora = styled.button`
+    background-color: #FED941;
+    padding: 6px;
+    padding-top: 10px;
+    border-radius: 2px;
+    border: none;
+    display: flex;
+    cursor:pointer;
+    overflow: hidden;
 `;

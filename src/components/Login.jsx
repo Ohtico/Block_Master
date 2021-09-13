@@ -5,7 +5,7 @@ import {Tasa, Tetera, But, Boligrafo, Voto, Enlace, Nachos} from '../style/Style
 import {Link} from 'react-router-dom'
 import Swal from 'sweetalert2'
 const url = 'https://api-sprint-dos.herokuapp.com/usuario'
-//  
+let usuarioLog = []
 
 export default class Login extends Component {
 
@@ -36,6 +36,14 @@ export default class Login extends Component {
                     }).then((result) => {
                         if (result.isConfirmed) {
                             window.location= "/";
+                            const activo = {
+                                nombre: respuesta.nombre,
+                                apellido: respuesta.apellido_paterno,
+                                username: respuesta.username,
+                                id: respuesta.id,
+                            }
+                            usuarioLog.push(activo);
+                            localStorage.setItem('usuario', JSON.stringify(usuarioLog))
                         }
                       })
 
@@ -61,7 +69,6 @@ export default class Login extends Component {
                 [e.target.name]: e.target.value 
             }
         });
-        console.log(this.state.form) //imprimir todo el estado 
     }
 
     handleSubmit = (e) =>{
@@ -71,14 +78,12 @@ export default class Login extends Component {
 
     render() {
         return (
-            <Tasa>
-                
-               
+            <Tasa>  
             <form onSubmit={this.handleSubmit} className="form-signin">
             <Nachos>
                      <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
                 </Nachos>
-                <Boligrafo>Inicio de sesión</Boligrafo>
+                <Boligrafo>Login</Boligrafo>
                     <Tetera>
                         <But
                             type="email"
@@ -102,6 +107,10 @@ export default class Login extends Component {
                     <Tasa>
                         <Link to="/registro" ><Enlace>Create new account </Enlace></Link>
                     </Tasa>
+                    <Tasa>
+                        <Link to="/" ><Enlace>Back home</Enlace></Link>
+                    </Tasa>
+                    
                   
             </form>
         </Tasa>

@@ -3,18 +3,21 @@ import Cartas from '../components/Cartas';
 import { Manos, Contenedor, Enlace, But, Voto, Imperro, Luz } from '../style/StyledAll'
 import { Link } from 'react-router-dom'
 
-// import Cabecera from '../components/Cabecera'  
+
 
 let urlbase = 'https://pelis-blockmaster.herokuapp.com/peliculas?title_like='
-//?titulo_like=lok
 
+let pedirLocal = JSON.parse(localStorage.getItem("usuario"))
 export default class AppBlock extends Component {
+
+    
 
     constructor() {
         super();
         this.state = {
             peli: [],
-            searchTerm: ''
+            searchTerm: '',
+            sesion: 'true'
         }
     }
 
@@ -22,7 +25,7 @@ export default class AppBlock extends Component {
         const rest = await fetch(urlbase)
         const data = await rest.json()
         this.setState({ peli: data })
-        console.log(data);
+        
     }
     trello = async (e) => {
         e.preventDefault()
@@ -62,6 +65,13 @@ export default class AppBlock extends Component {
             }
         })
     }
+    definirBot = () => {
+        if(pedirLocal !== null) {
+            window.location.assign("/editar")
+        }else{
+            window.location.assign("/login")
+        }
+    }
 
     render() {
         const handleOnsubmit = async (e) => {
@@ -80,10 +90,11 @@ export default class AppBlock extends Component {
                         <li><Enlace onClick={this.menosValoradas} >Menos Valoradas</Enlace></li>
                         <Imperro>
                             <form onSubmit={handleOnsubmit}>
-                                <But placeholder="Busca tu pelicula favorita" type="text" name="searchTerm" value={this.state.searchTerm} onChange={(e) => this.setState({ searchTerm: e.target.value })} /><Voto><i className="material-icons" onClick={handleOnsubmit} id="car">search</i></Voto>
-                                <Link to="/login"><Voto><i className="material-icons" id="car">person_outline</i></Voto></Link>
-                            </form>
+                                <But placeholder="Busca tu pelicula favorita" type="text" name="searchTerm" value={this.state.searchTerm} onChange={(e) => this.setState({ searchTerm: e.target.value })} />
+                                <Voto><i className="material-icons" onClick={handleOnsubmit} id="car">search</i></Voto>
+                                <Voto onClick={this.definirBot}><Voto ><i className="material-icons" id="car">person_outline</i></Voto></Voto>
 
+                            </form>
                         </Imperro>
                     </Contenedor>
                 </Contenedor>
@@ -97,14 +108,10 @@ export default class AppBlock extends Component {
                                     key={`${movie}-${index}`}
                                     movies={movie}
                                 />
-
-
                             )
                         })
                     }
                 </Luz>
-
-
 
             </Manos>
         )

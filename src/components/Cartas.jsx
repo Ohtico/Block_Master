@@ -3,9 +3,6 @@ import { ContImg, Calificacion } from '../style/StyledAll';
 import '../style/main.css';
 import Detalle from './Detalle';
 
-// let color = document.getElementById('predeterminado')
-
-//let urlbase = 'https://pelis-blockmaster.herokuapp.com/peliculas?title_like='
 
 export default class Cartas extends Component {
 
@@ -17,11 +14,9 @@ export default class Cartas extends Component {
     }
 
     modalDescripcion = (e) => {
-        //console.log(e.target.id);
         const array = []
         array.push(e.target)
         this.setState({descipcion: array})
-        //  console.log(this.descipcion);
     }
 
 
@@ -34,7 +29,6 @@ export default class Cartas extends Component {
                 <Calificacion className={vote_average >= 7 ? "colorPre" : "cell"}><img src="https://res.cloudinary.com/ohtico/image/upload/v1631319950/Block-Master-React/Vector_njcwdy.png" alt="" />{vote_average}</Calificacion>
                 <img id={id} className={overview}  src={"https://image.tmdb.org/t/p/w500" + poster_path} width="200px" alt={title} onClick={this.modalDescripcion} />
                 {
-
                     this.state.descipcion.map((todo, index) => {
                         return (
 

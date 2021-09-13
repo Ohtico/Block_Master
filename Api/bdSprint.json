@@ -39,7 +39,8 @@
         "descripcion": "The Walking Dead está ambientada en un futuro apocalíptico con la Tierra devastada por el efecto de un cataclismo, que ha provocado la mutación en zombies de la mayor parte de los habitantes del planeta. La serie, explora las dificultades de los protagonistas para sobrevivir en un mundo poblado por el horror, así como las relaciones personales que se establecen entre ellos, en ocasiones también una amenaza para su supervivencia.",
         "portada":
           "https://res.cloudinary.com/ohtico/image/upload/v1630898597/Block-Master-React/peliculas/wsq1xCuC9kDhFeoE7xuQFDC5iRC_qb1dlm.jpg"
-      },{
+      },
+      {
         "id": 5,
         "genero": "Crimen, Sci-Fi & Fantasy",
         "puntuacion": "85",
@@ -48,7 +49,8 @@
         "descripcion": "La serie se centrará en Lucifer (Tom Ellis) quien, aburrido e infeliz como el Señor del Infierno, dimite de su trono y abandona su reino para trasladarse a la ciudad de Los Angeles y abrir un lujoso piano-bar llamado Lux. Una vez allí ayudará a la policía a castigar a los más peligrosos criminales de la ciudad.",
         "portada":
           "https://res.cloudinary.com/ohtico/image/upload/v1630898721/Block-Master-React/peliculas/wQh2ytX0f8IfC3b2mKpDGOpGTXS_rzxnan.jpg"
-      },{
+      },
+      {
         "id": 6,
         "genero": "Ciencia ficción, Acción, Suspense",
         "puntuacion": "47",
@@ -57,7 +59,8 @@
         "descripcion": "Autodestrucción es una versión de un mundo futuro, como si fuera un videojuego, y que a través de una serie de experimentos consiguen energía ilimitada de los universos paralelos. Todo parecer ir bien cuando algo del experimento sale mal. Para salvar a su familia del tremendo desastre provocado, el piloto Will Porterdeberá conseguir que la caja Redivider llegue a una torre y así salvar a la humanidad.",
         "portada":
           "https://res.cloudinary.com/ohtico/image/upload/v1630898916/Block-Master-React/peliculas/v37W2H5ViMpl1uWeAoTpr3YKJxX_u8x65r.jpg"
-      },{
+      },
+      {
         "id": 7,
         "genero": "Suspense, Acción",
         "puntuacion": "64",
@@ -66,7 +69,8 @@
         "descripcion": "Se ha puesto precio a la cabeza de la hija de un multimillonario que tiene la intención de acabar con el mayor sindicato del crimen de la ciudad. Un equipo de mercenarios retirados deberán enfrentarse a un grupo de asesinos profesionales, y detenerlos antes de que maten a su objetivo.",
         "portada":
           "https://res.cloudinary.com/ohtico/image/upload/v1630899067/Block-Master-React/peliculas/dNqgzDOkOjEaJRO4dp85ay0feu7_apzmoq.jpg"
-      },{
+      },
+      {
         "id": 8,
         "genero": "Drama, Acción",
         "puntuacion": "69",
@@ -75,7 +79,8 @@
         "descripcion": "Traicionado por las fuerzas coloniales holandesas, Arana logra escapar con sus sobrinos Jamar y Suwo, los hijos recién nacidos de Hamza, uno de los últimos sultanes indonesios que luchan contra la tiranía extranjera. En 1860, después de vagar durante años por las llanuras del salvaje oeste americano, Arana y los dos hermanos regresan a Indonesia para vengar a sus seres queridos y castigar al miserable que causó su desgracia.",
         "portada":
           "https://res.cloudinary.com/ohtico/image/upload/v1630899219/Block-Master-React/peliculas/o1Bn2zlIDJSnM5aOljbOPTM6Kf9_ye3wi7.jpg"
-      },{
+      },
+      {
         "id": 9,
         "genero": "Terror, Suspense",
         "puntuacion": "64",
@@ -84,7 +89,8 @@
         "descripcion": "Secuela espiritual del clásico de terror de 1992 Candyman. En esta ocasión, la historia transcurre en el gentrificado barrio de Chicago donde la leyenda comenzó.",
         "portada":
           "https://res.cloudinary.com/ohtico/image/upload/v1630899346/Block-Master-React/peliculas/40FuQAiHjCvh9fYFigGAVWJ6Czu_oh2l31.jpg"
-      },{
+      },
+      {
         "id": 10,
         "genero": "Drama, Suspense",
         "puntuacion": "58",

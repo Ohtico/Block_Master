@@ -5,7 +5,7 @@ import uuid from 'react-uuid'
 import axios from 'axios'
 import md5 from 'md5'
 import Swal from 'sweetalert2'
-
+let usuarioLog = []
 const urlBase = 'https://api-sprint-dos.herokuapp.com/usuario'
 
 export default class Registro extends Component {
@@ -54,6 +54,13 @@ export default class Registro extends Component {
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location = "/";
+                    const activo = {
+                        nombre:  this.state.form.nombre,
+                        apellido: this.state.form.apellido_paterno,
+                        username: this.state.form.username
+                    }
+                    usuarioLog.push(activo);
+                    localStorage.setItem('usuario', JSON.stringify(usuarioLog))
                 }
             })
         }).catch(error => {
@@ -70,9 +77,9 @@ export default class Registro extends Component {
                         <Nachos>
                             <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
                         </Nachos>
-                        <Boligrafo>¡Registrate en nuestro sistema!</Boligrafo>
+                        <Boligrafo>Register in our system!</Boligrafo>
                         <div className="fadeIn first ">
-                            <Boligrafo>Crea una cuenta</Boligrafo>
+                            <Boligrafo>Create an account</Boligrafo>
                         </div>
                         <Tetera>
                             <But
@@ -113,6 +120,9 @@ export default class Registro extends Component {
                         </Tetera>
                         <Tasa>
                             <Link to="/login" ><Enlace>Already registered?</Enlace></Link>
+                        </Tasa>
+                        <Tasa>
+                            <Link to="/" ><Enlace>Back home</Enlace></Link>
                         </Tasa>
 
                     </form>
