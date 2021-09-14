@@ -1,23 +1,35 @@
 import React, { Component } from 'react'
-import { Tasa, Enlace, Voto} from '../style/StyledAll'
-import {Link} from 'react-router-dom'
-
-
+import { Link } from 'react-router-dom'
+import { Tasa, Boligrafo, Voto, Enlace, Nachos } from '../style/StyledAll'
+let mirarLocal = JSON.parse(localStorage.getItem("usuario"))
 
 export default class EditarPer extends Component {
 
-    actualizarLocal  = () => {
+    actualizarLocal = () => {
         localStorage.setItem('usuario', null)
         window.location.assign("/")
+
     }
 
+
     render() {
+        console.log(mirarLocal[0]);
         return (
-            <div>
-                <Tasa>
-                    
-                 <Link to="/" >  <Voto onClick={this.actualizarLocal} ><Enlace>Back home</Enlace></Voto> </Link>
-                </Tasa>
+            <div className="d-flex justify-content-center">
+
+                <div>
+                    <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
+                </div>
+                <hr/>
+                <div>
+                    <h1>Bienvenido</h1>
+                    <h1>{mirarLocal[0].nombre} {mirarLocal[0].apellido}</h1>
+                    <p>{mirarLocal[0].username}</p>
+
+                </div>
+
+
+
             </div>
         )
     }

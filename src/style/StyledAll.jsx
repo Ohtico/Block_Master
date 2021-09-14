@@ -105,7 +105,7 @@ export const ModalDiv = styled.div`
 `
 export const ContentDiv = styled.div`
     position: fixed;
-    width: 50%;
+    width: 70%;
     height: auto;
     top: 50%;
     left: 50%;

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ModalDiv, ContentDiv, ContDetalles, Descripcion, VerAhora } from '../style/StyledAll';
 import Video from './Video';
 import axios from 'axios'
+import EditPeli from './EditPeli';
 
 
 export default class Detalle extends Component {
@@ -9,7 +10,8 @@ export default class Detalle extends Component {
     constructor() {
         super();
         this.state = {
-            video: []
+            video: [],
+            editar: []
         }
     }
 
@@ -26,6 +28,12 @@ export default class Detalle extends Component {
         window.location.assign("/")
     }
 
+    editarPeliculas = (e) => {
+        const modificarPe = []
+        modificarPe.push(e.target)
+        this.setState({ editar: modificarPe })
+    }
+
     render() {
         const { id, className, src, alt } = this.props.lapiz
 
@@ -38,19 +46,27 @@ export default class Detalle extends Component {
                         <Descripcion>
                             <h1>{alt} </h1>
                             <p>{className}</p>
-
                             <div className="d-grid gap-2 mx-auto mt-2">
-                                
-                            <VerAhora className="d-flex justify-content-center" onClick={this.verAhora} id={id} ><i className="material-icons" id="car">arrow_right</i>VER AHORA</VerAhora>
-                            <VerAhora className="d-flex justify-content-center" onClick={this.handleDelete} id={id} ><i className="material-icons" id="car">arrow_right</i>REMOVER</VerAhora>
+                                <VerAhora className="d-flex justify-content-center" onClick={this.verAhora} id={id} ><i className="material-icons" id="car">arrow_right</i>VER AHORA</VerAhora>
+                                <VerAhora className="d-flex justify-content-center" onClick={this.handleDelete} id={id} ><i className="material-icons" id="car">arrow_right</i>REMOVER</VerAhora>
+                                <VerAhora className="d-flex justify-content-center" onClick={this.editarPeliculas} id={id} ><i className="material-icons" id="car">arrow_right</i>EDITAR</VerAhora>
                             </div>
                             {
                                 this.state.video.map((pendiente, index) => {
                                     return (
-
                                         <Video
                                             key={`${pendiente}-${index}`}
                                             iframe={pendiente}
+                                        />
+                                    )
+                                })
+                            }
+                            {
+                                this.state.editar.map((modificar, index) => {
+                                    return (
+                                        <EditPeli
+                                            key={`${modificar}-${index}`}
+                                            editarVi={modificar}
                                         />
                                     )
                                 })

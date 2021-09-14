@@ -9,17 +9,19 @@ import Login from '../components/Login';
 import AppBlock from "../containers/AppBlock";
 import Registro from "../components/Registro";
 import EditarPer from '../components/EditarPer';
+import EditPeli from '../components/EditPeli';
 
 export default class AppRouter extends Component {
       render() {
-            return ( 
-                  <Router> 
+            return (
+                  <Router>
                         <Switch>
-                              <Route exact path="/editar" component={EditarPer}/>
-                              <Route exact path="/detalle" component={Detalle}/>
-                              <Route exact path="/registro" component={Registro}/>
-                              <Route exact path="/login" component={Login}/>
-                              <Route exact path="/" component={AppBlock}/>
+                              <Route exact path="/editPeli" component={EditPeli} />
+                              <Route exact path="/editar" component={EditarPer} />
+                              <Route exact path="/detalle" component={Detalle} />
+                              <Route exact path="/registro" component={Registro} />
+                              <Route exact path="/login" component={Login} />
+                              <Route exact path="/" component={AppBlock} />
                         </Switch>
                   </Router>
             )

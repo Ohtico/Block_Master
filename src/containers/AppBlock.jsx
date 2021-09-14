@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Cartas from '../components/Cartas';
 import { Manos, Contenedor, Enlace, But, Voto, Imperro, Luz } from '../style/StyledAll'
 import { Link } from 'react-router-dom'
+import Carrosel from '../components/Carrosel';
 
 
 
@@ -10,7 +11,7 @@ let urlbase = 'https://pelis-blockmaster.herokuapp.com/peliculas?title_like='
 let pedirLocal = JSON.parse(localStorage.getItem("usuario"))
 export default class AppBlock extends Component {
 
-    
+
 
     constructor() {
         super();
@@ -25,7 +26,7 @@ export default class AppBlock extends Component {
         const rest = await fetch(urlbase)
         const data = await rest.json()
         this.setState({ peli: data })
-        
+
     }
     trello = async (e) => {
         e.preventDefault()
@@ -42,7 +43,7 @@ export default class AppBlock extends Component {
     }
 
     masValoradas = async () => {
-        
+
         const res = await fetch(urlbase)
         const data = await res.json()
         const array = []
@@ -66,9 +67,9 @@ export default class AppBlock extends Component {
         })
     }
     definirBot = () => {
-        if(pedirLocal !== null) {
+        if (pedirLocal !== null) {
             window.location.assign("/editar")
-        }else{
+        } else {
             window.location.assign("/login")
         }
     }
@@ -82,6 +83,7 @@ export default class AppBlock extends Component {
         }
         return (
             <Manos>
+                
                 <Contenedor>
                     <Contenedor>
                         <li><Link to="/"><img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" /></Link></li>
@@ -92,13 +94,13 @@ export default class AppBlock extends Component {
                             <form onSubmit={handleOnsubmit}>
                                 <But placeholder="Busca tu pelicula favorita" type="text" name="searchTerm" value={this.state.searchTerm} onChange={(e) => this.setState({ searchTerm: e.target.value })} />
                                 <Voto><i className="material-icons" onClick={handleOnsubmit} id="car">search</i></Voto>
-                                <Voto onClick={this.definirBot}><Voto ><i className="material-icons" id="car">person_outline</i></Voto></Voto>
+                                <Voto onClick={this.definirBot}><i className="material-icons" id="car">person_outline</i></Voto>
 
                             </form>
                         </Imperro>
                     </Contenedor>
                 </Contenedor>
-
+                <Carrosel/>
                 <Luz>
                     {
                         this.state.peli.map((movie, index) => {

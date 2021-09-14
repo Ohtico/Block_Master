@@ -55,7 +55,7 @@ export default class Registro extends Component {
                 if (result.isConfirmed) {
                     window.location = "/";
                     const activo = {
-                        nombre:  this.state.form.nombre,
+                        nombre: this.state.form.nombre,
                         apellido: this.state.form.apellido_paterno,
                         username: this.state.form.username
                     }
@@ -72,13 +72,13 @@ export default class Registro extends Component {
         return (
 
             <Tasa>
-                <div className="Registro py-5 container text-center">
-                    <form className="form-signin" onSubmit={this.handleSubmit}>
+                <div >
+                    <form onSubmit={this.handleSubmit}>
                         <Nachos>
                             <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
                         </Nachos>
                         <Boligrafo>Register in our system!</Boligrafo>
-                        <div className="fadeIn first ">
+                        <div >
                             <Boligrafo>Create an account</Boligrafo>
                         </div>
                         <Tetera>

@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import md5 from 'md5'
-import {Tasa, Tetera, But, Boligrafo, Voto, Enlace, Nachos} from '../style/StyledAll'
-import {Link} from 'react-router-dom'
+import { Tasa, Tetera, But, Boligrafo, Voto, Enlace, Nachos } from '../style/StyledAll'
+import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 const url = 'https://api-sprint-dos.herokuapp.com/usuario'
 let usuarioLog = []
 
 export default class Login extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            form:{
+            form: {
                 username: '',
                 password: ''
             }
@@ -27,7 +27,7 @@ export default class Login extends Component {
             .then(response => {
                 if (response.length > 0) {
                     let respuesta = response[0];
-                    
+
                     Swal.fire({
                         background: '#0E3FA9',
                         title: `Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`,
@@ -35,7 +35,7 @@ export default class Login extends Component {
                         confirmButtonText: 'Continuar'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.location= "/";
+                            window.location = "/";
                             const activo = {
                                 nombre: respuesta.nombre,
                                 apellido: respuesta.apellido_paterno,
@@ -45,7 +45,7 @@ export default class Login extends Component {
                             usuarioLog.push(activo);
                             localStorage.setItem('usuario', JSON.stringify(usuarioLog))
                         }
-                      })
+                    })
 
                 } else {
                     //alert(' El usuario o la contraseña no son correctos');
@@ -66,24 +66,24 @@ export default class Login extends Component {
         await this.setState({
             form: {
                 ...this.state.form,
-                [e.target.name]: e.target.value 
+                [e.target.name]: e.target.value
             }
         });
     }
 
-    handleSubmit = (e) =>{
+    handleSubmit = (e) => {
         e.preventDefault();
         this.iniciarSesion();
     }
 
     render() {
         return (
-            <Tasa>  
-            <form onSubmit={this.handleSubmit} className="form-signin">
-            <Nachos>
-                     <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
-                </Nachos>
-                <Boligrafo>Login</Boligrafo>
+            <Tasa>
+                <form onSubmit={this.handleSubmit} className="form-signin">
+                    <Nachos>
+                        <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
+                    </Nachos>
+                    <Boligrafo>Login</Boligrafo>
                     <Tetera>
                         <But
                             type="email"
@@ -92,7 +92,7 @@ export default class Login extends Component {
                             placeholder="Email"
                             required=""
                             name="username"
-                            onChange={this.handleChange}/>
+                            onChange={this.handleChange} />
                         <But
                             type="Password"
                             id="inputPassword"
@@ -100,8 +100,8 @@ export default class Login extends Component {
                             placeholder="Password"
                             required=""
                             name="password"
-                            onChange={this.handleChange}/><br />
-                            
+                            onChange={this.handleChange} /><br />
+
                         <Voto type="submit">Login</Voto>
                     </Tetera>
                     <Tasa>
@@ -110,10 +110,8 @@ export default class Login extends Component {
                     <Tasa>
                         <Link to="/" ><Enlace>Back home</Enlace></Link>
                     </Tasa>
-                    
-                  
-            </form>
-        </Tasa>
+                </form>
+            </Tasa>
         )
     }
 }
