@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Tasa, Boligrafo, Voto, Enlace, Nachos } from '../style/StyledAll'
+import { Tasa, Voto, Enlace } from '../style/StyledAll'
 let mirarLocal = JSON.parse(localStorage.getItem("usuario"))
 
 export default class EditarPer extends Component {
@@ -10,7 +10,6 @@ export default class EditarPer extends Component {
         window.location.assign("/")
 
     }
-
 
     render() {
         console.log(mirarLocal[0]);
@@ -28,7 +27,9 @@ export default class EditarPer extends Component {
 
                 </div>
 
-
+                <Tasa>
+                    <Link to="/" >  <Voto onClick={this.actualizarLocal} ><Enlace>Cerrar Sesion</Enlace></Voto> </Link>
+                </Tasa>
 
             </div>
         )

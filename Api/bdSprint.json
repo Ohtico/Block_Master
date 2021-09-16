@@ -116,6 +116,79 @@
         "username": "johannaOspina@gmail.com",
         "password": "2c526bfb75fb91c8a2b27c073d2e89bf"
       }
+    ],
+    "ofertas": [
+      {
+        "id": 1,
+        "name_product": "Aguacate Hass",
+        "price": "69",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_2_srgzak.png"
+      }
+      ,
+      {
+        "id": 2,
+        "name_product": "Tomate",
+        "price": "22",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_1_lrismp.png"
+      }
+      ,
+      {
+        "id": 3,
+        "name_product": "Limon con Semilla",
+        "price": "27",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_q2n5ar.png"
+      }
+      ,
+      {
+        "id": 4,
+        "name_product": "Nopal Limpio",
+        "price": "26",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_3_vypwhy.png"
+      }
+      ,
+      {
+        "id": 5,
+        "name_product": "Tomate verde sin cascara",
+        "price": "20",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/image_5_h2zqa9.png"
+      }
+    ],
+    "popular": [
+      {
+        "id": 1,
+        "name_product": "San Rafael pechuga de pavo",
+        "price": "63",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_5_l7koq0.png"
+      }
+      ,
+      {
+        "id": 2,
+        "name_product": "Bimbo Pan BLanco Grande",
+        "price": "39",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_4_xohehv.png"
+      }
+      ,
+      {
+        "id": 3,
+        "name_product": "Mc Cormick Mayonesa",
+        "price": "49",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/image_13_xdnppa.png"
+      }
+      ,
+      {
+        "id": 4,
+        "name_product": "Colgate Pasta Dental Triple Familiar 2 U",
+        "price": "36",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_3_vypwhy.png"
+      }
+      ,
+      {
+        "id": 5,
+        "name_product": "Huevos San Juan",
+        "price": "38",
+        "img": "https://res.cloudinary.com/ohtico/image/upload/v1631632186/tiendita/Product_6_srn6mz.png"
+      }
     ]
 }
+
   

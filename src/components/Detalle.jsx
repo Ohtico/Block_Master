@@ -3,6 +3,7 @@ import { ModalDiv, ContentDiv, ContDetalles, Descripcion, VerAhora } from '../st
 import Video from './Video';
 import axios from 'axios'
 import EditPeli from './EditPeli';
+import { Link } from 'react-router-dom'
 
 
 export default class Detalle extends Component {
@@ -38,7 +39,6 @@ export default class Detalle extends Component {
         const { id, className, src, alt } = this.props.lapiz
 
         return (
-
             <ModalDiv>
                 <ContentDiv>
                     <ContDetalles>
@@ -48,7 +48,7 @@ export default class Detalle extends Component {
                             <p>{className}</p>
                             <div className="d-grid gap-2 mx-auto mt-2">
                                 <VerAhora className="d-flex justify-content-center" onClick={this.verAhora} id={id} ><i className="material-icons" id="car">arrow_right</i>VER AHORA</VerAhora>
-                                <VerAhora className="d-flex justify-content-center" onClick={this.handleDelete} id={id} ><i className="material-icons" id="car">arrow_right</i>REMOVER</VerAhora>
+                                <VerAhora className="d-flex justify-content-center" onClick={this.handleDelete} id={id} > <i className="material-icons" id="car">arrow_right</i>REMOVER </VerAhora>
                                 <VerAhora className="d-flex justify-content-center" onClick={this.editarPeliculas} id={id} ><i className="material-icons" id="car">arrow_right</i>EDITAR</VerAhora>
                             </div>
                             {
