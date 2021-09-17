@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Tasa, Voto, Enlace } from '../style/StyledAll'
+import { Tasa, Voto, Enlace, Nachos, Tetera, Boligrafo, Correo } from '../style/StyledAll'
 let mirarLocal = JSON.parse(localStorage.getItem("usuario"))
 
 export default class EditarPer extends Component {
@@ -14,24 +14,23 @@ export default class EditarPer extends Component {
     render() {
         console.log(mirarLocal[0]);
         return (
-            <div className="d-flex justify-content-center">
-
+            <Tasa>
                 <div>
-                    <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
+                    <Nachos>
+                        <img src="https://res.cloudinary.com/ohtico/image/upload/v1630879096/Block-Master-React/logo-blockBuster_qgkt4h.png" alt="Logo" />
+                    </Nachos>
+                    <hr />
+                    <Tetera>
+                        <Boligrafo>Bienvenido</Boligrafo>
+                        <Boligrafo>{mirarLocal[0].nombre} {mirarLocal[0].apellido}</Boligrafo>
+                        <Correo>{mirarLocal[0].username}</Correo>
+                    <Tasa>
+                        <Link to="/" >  <Voto onClick={this.actualizarLocal} ><Enlace>Cerrar Sesion</Enlace></Voto> </Link>
+                        <Link to="/" ><Enlace><Voto><Enlace> Back home</Enlace></Voto></Enlace></Link>
+                    </Tasa>
+                    </Tetera>
                 </div>
-                <hr/>
-                <div>
-                    <h1>Bienvenido</h1>
-                    <h1>{mirarLocal[0].nombre} {mirarLocal[0].apellido}</h1>
-                    <p>{mirarLocal[0].username}</p>
-
-                </div>
-
-                <Tasa>
-                    <Link to="/" >  <Voto onClick={this.actualizarLocal} ><Enlace>Cerrar Sesion</Enlace></Voto> </Link>
-                </Tasa>
-
-            </div>
+            </Tasa>
         )
     }
 }

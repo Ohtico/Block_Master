@@ -101,7 +101,6 @@ export default class Login extends Component {
                             required=""
                             name="password"
                             onChange={this.handleChange} /><br />
-
                         <Voto type="submit">Login</Voto>
                     </Tetera>
                     <Tasa>

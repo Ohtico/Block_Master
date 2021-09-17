@@ -130,3 +130,11 @@ export const VerAhora = styled.button`
     cursor:pointer;
     overflow: hidden;
 `;
+export const Correo = styled.p`
+    display: flex;
+    justify-content: center;
+`;
+export const NextP = styled.button`
+    display: flex;
+    justify-content: center;
+`

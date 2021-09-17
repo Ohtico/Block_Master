@@ -3,7 +3,6 @@ import { ModalDiv, ContentDiv, ContDetalles, Descripcion, VerAhora } from '../st
 import Video from './Video';
 import axios from 'axios'
 import EditPeli from './EditPeli';
-import { Link } from 'react-router-dom'
 
 
 export default class Detalle extends Component {
