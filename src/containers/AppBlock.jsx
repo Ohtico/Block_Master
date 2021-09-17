@@ -36,7 +36,7 @@ export default class AppBlock extends Component {
             nextt = ((nextt - nextt.length) +1)
         }
         this.setState({ peli:[...this.state.peli.concat(nuevaPa) ] })
-        console.log(this.state.peli);
+        console.log(nextt);
     }
 
 
@@ -77,14 +77,7 @@ export default class AppBlock extends Component {
             }
         })
     }
-    definirBot = () => {
-        if (pedirLocal !== null) {
-            window.location.assign("/editar")
-        } else {
-            window.location.assign("/login")
-        }
-    }
-
+    
     render() {
         const handleOnsubmit = async (e) => {
             e.preventDefault()
@@ -104,7 +97,8 @@ export default class AppBlock extends Component {
                             <form onSubmit={handleOnsubmit}>
                                 <But placeholder="Busca tu pelicula favorita" type="text" name="searchTerm" value={this.state.searchTerm} onChange={(e) => this.setState({ searchTerm: e.target.value })} />
                                 <Voto><i className="material-icons" onClick={handleOnsubmit} id="car">search</i></Voto>
-                                <Voto onClick={this.definirBot}><i className="material-icons" id="car">person_outline</i></Voto>
+                                <Link to={pedirLocal !== null ? "/editar" : "/login"}><Voto><i className="material-icons" id="car">person_outline</i></Voto></Link>
+                                
                             </form>
                         </Imperro>
                     </Contenedor>
